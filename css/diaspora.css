@@ -23,6 +23,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
   background: #fff;
+  font-size: 1.5rem;
 }
 
 body {
@@ -167,9 +168,12 @@ audio {
   background-repeat: no-repeat;
   background-position: center center;
   /*-webkit-mask-box-image: url("/img/logo.png");*/
-  background-color: white;
-  width: 75px;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
   height: 32px;
+  line-height: 32px;
+  padding: 0 20px;
   /*mask-image: url("/img/logo.png");*/
   mask-size: contain;
   transition: background-color 0.5s ease-in-out;
@@ -787,7 +791,7 @@ body.mu .icon-logo {
 }
 
 #single {
-  background: #fff;
+  background: #efefef;
   position: relative;
   overflow-x: hidden;
 }
@@ -986,7 +990,7 @@ h1.title {
 }
 
 .article {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   margin-top: 50px;
   display: -webkit-flex;
@@ -1004,7 +1008,7 @@ h1.title {
 }
 
 .article .main {
-  width: 700px;
+  width: 80%;
 }
 
 .article .side {
