@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="zh-CH" class="loading">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>如何使用Hexo快速构建一个博客 - Encore&#39;s Blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="Encore Shao, Blog, 邵壮,"> 
+    <meta name="description" content="我是一个生活在上海的软件开发工程师.,准备开始使用Hexo之前，请先确保你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！
+
+安装Node.js (https://www.runoob.com/nodejs/nodejs,"> 
+    <meta name="author" content="Encore Shao"> 
+    <link rel="alternative" href="atom.xml" title="Encore&#39;s Blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+</head>
+</html>
+<body class="loading">
+    <span id="config-title" style="display:none">Encore&#39;s Blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">如何使用Hexo快速构建一个博客</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">如何使用Hexo快速构建一个博客</h1>
+        <div class="stuff">
+            <span>四月 28, 2019</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>开始使用Hexo之前，请先确保你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！</p>
+<ul>
+<li>安装Node.js (<a href="https://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">https://www.runoob.com/nodejs/nodejs-install-setup.html</a>)</li>
+<li>安装Git (<a href="http://git-scm.com/download/" target="_blank" rel="noopener">http://git-scm.com/download/</a>)</li>
+<li>安装Hexo (<a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io/</a>)  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo g # 或者 hexo generate</span><br><span class="line">hexo server hexo s # 或者 hexo server，此时您可以在 http://localhost:4000/ 查看预览结果</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>接下来我们聊聊关于Hexo常用的几个命令:</p>
+<ul>
+<li>hexo generate (hexo g)  生成静态文件，会在当前根目录下生成一个新的叫做 <code>public</code> 的文件夹</li>
+<li>hexo server (hexo s)    本地预览，启动本地web服务</li>
+<li>hexo deploy (hexo d)    部署博客到remote（比如github, heroku等平台）</li>
+</ul>
+<h2 id="添加主题-diaspora-到你的博客中"><a href="#添加主题-diaspora-到你的博客中" class="headerlink" title="添加主题 diaspora 到你的博客中"></a>添加主题 <code>diaspora</code> 到你的博客中</h2><p>你可以在github中找到源码 - <a href="https://github.com/Fechin/hexo-theme-diaspora" target="_blank" rel="noopener">https://github.com/Fechin/hexo-theme-diaspora</a></p>
+<p>克隆主题到themes目录中</p>
+<blockquote>
+<p>git submodule add <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:Fechin/hexo-theme-diaspora.git themes/diaspora</p>
+</blockquote>
+<p><strong>使用hexo deploy部署</strong></p>
+<p>可以使用hexo deploy可以部署到很多平台，具体可以参考<a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">这个链接</a>. 如果部署到github，需要在配置文件_config.xml中作如下修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:encoreshao/encoreshao.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>然后在命令行中执行</p>
+<blockquote>
+<p>hexo d</p>
+</blockquote>
+<p>即可完成部署。</p>
+<p>注意需要提前安装一个扩展：</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+<h3 id="使用git命令行部署"><a href="#使用git命令行部署" class="headerlink" title="使用git命令行部署"></a>使用git命令行部署</h3><blockquote>
+<p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:encoreshao/encoreshao.github.io.git .deploy/encoreshao.github.io</p>
+</blockquote>
+<h3 id="创建一个deploy脚本文件-bin-deploy-sh"><a href="#创建一个deploy脚本文件-bin-deploy-sh" class="headerlink" title="创建一个deploy脚本文件(bin/deploy.sh)"></a>创建一个deploy脚本文件(bin/deploy.sh)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env ruby</span><br><span class="line">require &apos;fileutils&apos;</span><br><span class="line">include FileUtils</span><br><span class="line"></span><br><span class="line">def system!(*args)</span><br><span class="line">  system(*args) || abort(&quot;\n== Command #&#123;args&#125; failed ==&quot;)</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"># path to your application root.</span><br><span class="line">APP_ROOT = File.expand_path(&apos;..&apos;, __dir__)</span><br><span class="line"></span><br><span class="line">chdir APP_ROOT do</span><br><span class="line">  puts &apos;== Hexo Generate ==&apos;</span><br><span class="line">  system! &apos;hexo generate&apos;</span><br><span class="line"></span><br><span class="line">  puts &quot;== Copy files to .deploy/encoreshao.github.io ==&quot;</span><br><span class="line">  system! &apos;cp -R public/* .deploy/encoreshao.github.io&apos;</span><br><span class="line"></span><br><span class="line">  PUBLIC_ROOT = File.expand_path(&apos;encoreshao.github.io&apos;, &apos;.deploy&apos;)</span><br><span class="line">  chdir PUBLIC_ROOT do</span><br><span class="line">    puts &quot;== Git add ==&quot;</span><br><span class="line">    system! &apos;git add .&apos;</span><br><span class="line"></span><br><span class="line">    puts &quot;== Git commit ==&quot;</span><br><span class="line">    system! &apos;git commit -m &quot;MISC - Generate and push&quot;&apos;</span><br><span class="line"></span><br><span class="line">    puts &quot;== Git push origin ==&quot;</span><br><span class="line">    system! &apos;git push origin master&apos;</span><br><span class="line">  end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>chmod +x bin/deploy.sh</p>
+</blockquote>
+<ul>
+<li>使用 hexo generate 生成public文件夹下的新内容</li>
+<li>将其拷贝至 encoreshao.github.io 的git目录下</li>
+<li>使用 git commit 命令提交代码到 encoreshao.github.io</li>
+<li>Push 这个 repo 到远程 master</li>
+</ul>
+<blockquote>
+<p>bin/deploy.sh</p>
+</blockquote>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src>
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title="0" data-url="http://link.hhtjim.com/163/5146554.mp3"></li>
+                    
+                        <li title="1" data-url="http://link.hhtjim.com/qq/001faIUs4M2zna.mp3"></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link" data-ae="false" data-ci data-cs data-r data-o data-a data-d="false">查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
