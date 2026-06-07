@@ -1,205 +1,669 @@
-
 <!DOCTYPE html>
-<html lang="zh-CH" class="loading">
-<head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Encore&#39;s Blog - 邵壮的个人博客</title>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="google" content="notranslate">
-    <meta name="keywords" content="Encore Shao, Blog, 邵壮,"> 
-    <meta name="description" content="我是一个生活在上海的软件开发工程师.,"> 
-    <meta name="author" content="Encore Shao"> 
-    <link rel="alternative" href="atom.xml" title="Encore&#39;s Blog" type="application/atom+xml"> 
-    <link rel="icon" href="/img/favicon.png"> 
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <link rel="stylesheet" href="/css/diaspora.css">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({
-              google_ad_client: "ca-pub-8691406134231910",
-              enable_page_level_ads: true
-         });
-    </script>
-    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-    </script>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encore Shao — Engineer Manager & AI Researcher</title>
+  <meta name="description"
+    content="Encore Shao (encoreshao) — Engineer Manager & AI Researcher. Ruby on Rails, Agentic AI, MCP, RAG. Shanghai · icmoc.com">
+  <link rel="me" href="https://github.com/encoreshao">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js" type="module"></script>
 </head>
-</html>
-<body class="loading">
-    <span id="config-title" style="display:none">Encore&#39;s Blog</span>
-    <div id="loader"></div>
-    <div class="nav">
-    <ul id="menu-menu" class="menu">
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/about/" title="关于我" target="_blank" rel="noopener">关于我</a>
-        </li>
-        
-        <li class="  menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="https://github.com/encoreshao" title="Github" target="_blank" rel="noopener">Github</a>
-        </li>
-        
-        <li class="  menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="https://twitter.com/encoreshao" title="Twitter" target="_blank" rel="noopener">Twitter</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/categories/" title="分类" target="_blank" rel="noopener">分类</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/archives/" title="归档" target="_blank" rel="noopener">归档</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/tags/" title="标签云" target="_blank" rel="noopener">标签云</a>
-        </li>
-        
-    </ul>
-    <p id="copyright">
-        &copy; 2019 Encore Shao.
-        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-    </p>
-</div>
 
-<div id="container">
-    
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img src="/img/welcome-cover.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
-        </div>
+<body>
+
+  <!-- ── HERO ─────────────────────────────────── -->
+  <header class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-greeting"><span class="prompt" id="hero-prompt" title="Double click for terminal console">&gt;
+        </span><span class="typed-line" id="typed-name"></span><span class="cursor" id="cursor"></span></div>
+      <p class="hero-tagline" id="tagline"></p>
+      <div class="hero-badges" id="hero-badges" aria-label="Focus areas">
+        <span class="hero-badge">Ruby on Rails</span>
+        <span class="hero-badge">Agentic AI</span>
+        <span class="hero-badge">MCP</span>
+        <span class="hero-badge">RAG</span>
+        <span class="hero-badge">TypeScript</span>
+        <span class="hero-badge">iOS</span>
+      </div>
+      <div class="hero-links" id="hero-links">
+        <a href="https://github.com/encoreshao" target="_blank" rel="noopener"
+          class="hero-link">github.com/encoreshao</a>
+        <a href="https://icmoc.com" target="_blank" rel="noopener" class="hero-link">icmoc.com</a>
+        <a href="https://www.linkedin.com/in/encoreshao/" target="_blank" rel="noopener"
+          class="hero-link">linkedin.com/in/encoreshao</a>
+        <a href="mailto:encore.shao@gmail.com" class="hero-link">encore.shao@gmail.com</a>
+      </div>
+      <p class="hero-github-stats readme-muted" id="github-stats" aria-live="polite"></p>
     </div>
-    <div id="vibrant">
-        <svg viewbox="0 0 2880 1620" height="100%" preserveaspectratio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
+    <aside class="hero-aside" id="hero-aside" aria-label="Profile">
+      <a class="hero-avatar-link" href="https://github.com/encoreshao" target="_blank" rel="noopener"
+        title="Encore Shao on GitHub">
+        <div class="hero-avatar-wrap">
+          <div class="hero-avatar-glow" aria-hidden="true"></div>
+          <div class="hero-avatar-orbit" aria-hidden="true"></div>
+          <div class="hero-avatar-ring" aria-hidden="true"></div>
+          <div class="hero-avatar-corners" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <img class="hero-avatar" src="https://cdn.ekohe.com/xd6T/Encore-avatar.png" alt="Encore Shao" width="176"
+            height="176" loading="eager" decoding="async" />
+        </div>
+      </a>
+      <div class="hero-status" id="hero-status">
+        <span class="status-text">&#x1F91D; Open to <span id="pdoom-text" class="scramble-hover"
+            data-scramble="collaboration">collaboration</span></span>
+      </div>
+    </aside>
+  </header>
+
+  <div class="divider-bar" aria-hidden="true">
+    <div class="divider-inner"></div>
+  </div>
+
+  <!-- ── MAIN CONTENT ─────────────────────────── -->
+  <main class="content" id="content">
+    <div class="tree-section">
+
+      <!-- File Tree -->
+      <div class="tree-container">
+        <div class="tree-header">/</div>
+
+        <div class="tree" id="file-tree">
+          <div class="tree-item folder">
+            <span class="tree-connector">&#9500;&#9472;&#9472;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">about</span>
+          </div>
+          <div class="tree-item file active" data-file="readme" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9492;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z" />
+            </svg>
+            <span class="tree-label">README.md</span>
+          </div>
+
+          <div class="tree-item folder">
+            <span class="tree-connector">&#9500;&#9472;&#9472;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">opensource</span>
+          </div>
+          <div class="tree-item file" data-file="pinned" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z" />
+            </svg>
+            <span class="tree-label">PINNED.md</span>
+          </div>
+          <div class="tree-item file" data-file="china-regions" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">china_regions</span>
+          </div>
+          <div class="tree-item file" data-file="bamboohr-mcp" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">bamboohr-mcp</span>
+          </div>
+          <div class="tree-item file" data-file="github-trending" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">github-trending</span>
+          </div>
+          <div class="tree-item file" data-file="search-engines-scraper" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">search-engines-scraper</span>
+          </div>
+          <div class="tree-item file" data-file="ai-rss-reader" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9492;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">ai-rss-reader</span>
+          </div>
+
+          <div class="tree-item folder">
+            <span class="tree-connector">&#9500;&#9472;&#9472;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">products</span>
+          </div>
+          <div class="tree-item file" data-file="erp-hub" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">erp-hub</span>
+          </div>
+          <div class="tree-item file" data-file="ranbot" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">ranbot</span>
+          </div>
+          <div class="tree-item file" data-file="data-graph" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">data-graph</span>
+          </div>
+          <div class="tree-item file" data-file="github-explorer" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">github-explorer</span>
+          </div>
+          <div class="tree-item file" data-file="icmoc-web" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">icmoc.web</span>
+          </div>
+          <div class="tree-item file" data-file="bookmark-dashboard" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">bookmark-dashboard</span>
+          </div>
+          <div class="tree-item file" data-file="skills-tracker" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9492;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">skills-tracker</span>
+          </div>
+
+          <div class="tree-item folder">
+            <span class="tree-connector">&#9500;&#9472;&#9472;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">skills</span>
+          </div>
+          <div class="tree-item file" data-file="stack" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9492;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z" />
+            </svg>
+            <span class="tree-label">stack.md</span>
+          </div>
+
+          <div class="tree-item folder">
+            <span class="tree-connector">&#9500;&#9472;&#9472;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z" />
+            </svg>
+            <span class="tree-label">notes</span>
+          </div>
+          <div class="tree-item file" data-file="thinking" tabindex="0">
+            <span class="tree-connector">&nbsp;&nbsp;&nbsp;&nbsp;&#9492;&#9472;&#9472;</span>
+            <span class="tree-active-marker">&gt;</span>
+            <svg class="tree-icon" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M3.75 1.5a.25.25 0 00-.25.25v11.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25V6H9.75A1.75 1.75 0 018 4.25V1.5H3.75zm5.75.56v2.19c0 .138.112.25.25.25h2.19L9.5 2.06zM2 1.75C2 .784 2.784 0 3.75 0h5.086c.464 0 .909.184 1.237.513l3.414 3.414c.329.328.513.773.513 1.237v8.086A1.75 1.75 0 0112.25 15h-8.5A1.75 1.75 0 012 13.25V1.75z" />
+            </svg>
+            <span class="tree-label">thinking.txt</span>
+          </div>
+        </div>
+
+        <div class="tree-hint">
+          <kbd>j</kbd> <kbd>k</kbd> navigate &middot; <kbd>Enter</kbd> open
+        </div>
+      </div>
+
+      <!-- README Pane -->
+      <div class="readme-pane" id="readme-pane">
+        <div class="readme-header" id="readme-header"
+          style="display: flex; justify-content: flex-start !important; align-items: center; gap: 0.5rem;">
+          <span id="readme-header-text" class="readme-header-text">about/README.md</span>
+          <span id="readme-header-mascot" style="display: flex; align-items: center; margin-left: 0 !important;"></span>
+        </div>
+
+        <div class="readme-body" id="readme-body">
+
+          <!-- About -->
+          <div class="readme-content active" id="content-readme">
+            <p class="readme-lead">Hi there — I am Encore 👋</p>
+            <p><strong>Engineer Manager | AI Researcher</strong> at <a href="https://github.com/ekohe" target="_blank"
+                rel="noopener">Ekohe</a>. Shanghai · building at <a href="https://icmoc.com" target="_blank"
+                rel="noopener">icmoc.com</a>.</p>
+            <p>Exploring new technologies and shipping software solutions — from Rails monoliths to agentic AI, RAG, MCP
+              servers, and agent skills. Web development and open source on the side.</p>
+            <ul class="readme-list">
+              <li>Systems design &amp; scalable backends</li>
+              <li>AI agents, LLM tooling, and research prototypes</li>
+              <li>Chrome extensions, iOS, and developer experience</li>
+            </ul>
+            <p class="readme-muted" id="readme-github-line">GitHub @encoreshao — loading profile stats…</p>
+            <p class="readme-location"><a href="mailto:encore.shao@gmail.com">encore.shao@gmail.com</a> · <a
+                href="https://blog.icmoc.com" target="_blank" rel="noopener">Tech Journey blog</a></p>
+          </div>
+
+          <!-- pinned -->
+          <div class="readme-content" id="content-pinned">
+            <p class="readme-lead">PINNED.md</p>
+            <p class="readme-muted">Highlighted repositories from <a href="https://github.com/encoreshao"
+                target="_blank" rel="noopener">github.com/encoreshao</a> — open the tree items for details.</p>
+            <ul class="pin-list">
+              <li><span class="pin-stars">★ 25</span> <strong>china_regions</strong> — Ruby library for China regions
+              </li>
+              <li><span class="pin-stars">★ 10</span> <strong>github-trending</strong> — weekly trending repositories
+              </li>
+              <li><span class="pin-stars">★ 9</span> <strong>search-engines-scraper</strong> — Google, Bing, AOL results
+              </li>
+              <li><span class="pin-stars">★ 8</span> <strong>crunchbase-ruby-library</strong> — Crunchbase API v3.1</li>
+              <li><span class="pin-stars">★ 7</span> <strong>react-google-login</strong> — Google auth with React + Node
+              </li>
+              <li><span class="pin-stars">★ 4</span> <strong>bamboohr-mcp</strong> — BambooHR MCP (TypeScript)</li>
+            </ul>
+            <a href="https://github.com/encoreshao?tab=repositories" target="_blank" rel="noopener"
+              class="readme-repo-link">Browse all repos --&gt;</a>
+          </div>
+
+          <div class="readme-content" id="content-china-regions">
+            <p class="readme-lead">china_regions</p>
+            <p>Ruby library for China administrative regions — provinces, cities, and districts for apps that need
+              accurate locale data.</p>
+            <div class="readme-meta">
+              <span class="meta-lang"><span class="lang-dot" style="background:#CC0000"></span>Ruby</span>
+              <span class="meta-stat">&#9733; 25</span>
+            </div>
+            <div class="readme-tags">
+              <span class="tag">rubygem</span><span class="tag">china</span><span class="tag">i18n</span>
+            </div>
+            <a href="https://github.com/encoreshao/china_regions" target="_blank" rel="noopener"
+              class="readme-repo-link">View repository --&gt;</a>
+          </div>
+
+          <div class="readme-content" id="content-bamboohr-mcp">
+            <p class="readme-lead">bamboohr-mcp</p>
+            <p>Model Context Protocol server for BambooHR — built with Node.js and TypeScript so agents can work with HR
+              data safely and consistently.</p>
+            <div class="readme-meta">
+              <span class="meta-lang"><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+              <span class="meta-stat">&#9733; 4</span>
+            </div>
+            <div class="readme-tags">
+              <span class="tag">mcp</span><span class="tag">bamboohr</span><span class="tag">agents</span>
+            </div>
+            <a href="https://github.com/encoreshao/bamboohr-mcp" target="_blank" rel="noopener"
+              class="readme-repo-link">View repository --&gt;</a>
+          </div>
+
+          <div class="readme-content" id="content-github-trending">
+            <p class="readme-lead">github-trending</p>
+            <p>GitHub weekly trending repositories — notebooks and scrapers for discovering what the community is
+              shipping.</p>
+            <div class="readme-meta">
+              <span class="meta-lang"><span class="lang-dot" style="background:#DA5B0B"></span>Jupyter</span>
+              <span class="meta-stat">&#9733; 10</span>
+            </div>
+            <div class="readme-tags">
+              <span class="tag">github</span><span class="tag">trending</span><span class="tag">data</span>
+            </div>
+            <a href="https://github.com/encoreshao/github-trending" target="_blank" rel="noopener"
+              class="readme-repo-link">View repository --&gt;</a>
+          </div>
+
+          <div class="readme-content" id="content-search-engines-scraper">
+            <p class="readme-lead">search-engines-scraper</p>
+            <p>A simple way to view search results from Google, Bing, AOL, and other engines — useful for research and
+              automation pipelines.</p>
+            <div class="readme-meta">
+              <span class="meta-lang"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+              <span class="meta-stat">&#9733; 9</span>
+            </div>
+            <div class="readme-tags">
+              <span class="tag">scraping</span><span class="tag">search</span><span class="tag">python</span>
+            </div>
+            <a href="https://github.com/encoreshao/search-engines-scraper" target="_blank" rel="noopener"
+              class="readme-repo-link">View repository --&gt;</a>
+          </div>
+
+          <div class="readme-content" id="content-ai-rss-reader">
+            <p class="readme-lead">ai-rss-reader</p>
+            <p>Aggregates top technical blogs (including X/Twitter feeds), with multi-model AI summaries and a daily
+              briefing — inspired by curated engineer reading lists.</p>
+            <div class="readme-meta">
+              <span class="meta-lang"><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+            </div>
+            <div class="readme-tags">
+              <span class="tag">rss</span><span class="tag">llm</span><span class="tag">summarization</span><span
+                class="tag">agents</span>
+            </div>
+            <a href="https://github.com/encoreshao/ai-rss-reader" target="_blank" rel="noopener"
+              class="readme-repo-link">View repository --&gt;</a>
+          </div>
+
+          <!-- erp-hub -->
+          <div class="readme-content" id="content-erp-hub">
+            <p class="readme-lead">Enterprise Resource Hub</p>
+            <p>Full-featured ERP with project and contract management.</p>
+            <div class="readme-meta">
+              <span class="meta-lang"><span class="lang-dot" style="background:#CC0000"></span>Rails</span>
+            </div>
+            <div class="readme-tags">
+              <span class="tag">erp</span><span class="tag">workflow</span><span class="tag">contracts</span>
+            </div>
+            <a href="https://erp.icmoc.com" target="_blank" rel="noopener" class="readme-repo-link">Open ERP --&gt;</a>
+          </div>
+
+          <!-- ranbot -->
+          <div class="readme-content" id="content-ranbot">
+            <p class="readme-lead">RanBot</p>
+            <p>AI-powered bot platform for automation and intelligent agentic workflows.</p>
+            <div class="readme-meta">
+              <span class="meta-lang"><span class="lang-dot" style="background:#3B82F6"></span>Agentic AI</span>
+            </div>
+            <div class="readme-tags">
+              <span class="tag">mcp</span><span class="tag">bots</span><span class="tag">automation</span><span
+                class="tag">llm</span>
+            </div>
+            <a href="https://www.ranbot.online/" target="_blank" rel="noopener" class="readme-repo-link">Visit RanBot
+              --&gt;</a>
+          </div>
+
+          <!-- data-graph -->
+          <div class="readme-content" id="content-data-graph">
+            <p class="readme-lead">Data Graph</p>
+            <p>Interactive data visualization and graph exploration tool.</p>
+            <div class="readme-meta">
+              <span class="meta-lang"><span class="lang-dot" style="background:#22D3EE"></span>Data</span>
+            </div>
+            <div class="readme-tags">
+              <span class="tag">visualization</span><span class="tag">graphs</span><span class="tag">analytics</span>
+            </div>
+            <a href="https://data-graph.ranbot.online/" target="_blank" rel="noopener" class="readme-repo-link">Open
+              tool --&gt;</a>
+          </div>
+
+          <!-- github-explorer -->
+          <div class="readme-content" id="content-github-explorer">
+            <p class="readme-lead">GitHub Explorer</p>
+            <p>GitHub profile and repository viewer with enriched insights.</p>
+            <div class="readme-meta">
+              <span class="meta-lang"><span class="lang-dot" style="background:#3178c6"></span>Dev Tool</span>
+            </div>
+            <div class="readme-tags">
+              <span class="tag">github</span><span class="tag">developer-tools</span><span class="tag">api</span>
+            </div>
+            <a href="https://github.ranbot.online/" target="_blank" rel="noopener" class="readme-repo-link">Explore
+              --&gt;</a>
+          </div>
+
+          <!-- skills-tracker -->
+          <div class="readme-content" id="content-skills-tracker">
+            <p class="readme-lead">Skills Tracker</p>
+            <p>Skill tracking and learning progress management tool.</p>
+            <div class="readme-meta">
+              <span class="meta-lang"><span class="lang-dot" style="background:#10B981"></span>Learning</span>
+            </div>
+            <div class="readme-tags">
+              <span class="tag">skills</span><span class="tag">progress</span><span class="tag">education</span>
+            </div>
+            <a href="https://skills.ranbot.online/" target="_blank" rel="noopener" class="readme-repo-link">Track
+              skills --&gt;</a>
+          </div>
+
+          <div class="readme-content" id="content-icmoc-web">
+            <p class="readme-lead">icmoc.web</p>
+            <p>Source for the modern portfolio at icmoc.com — responsive layout, skills, projects, and contact flows.</p>
+            <div class="readme-meta">
+              <span class="meta-lang"><span class="lang-dot" style="background:#e34c26"></span>HTML</span>
+            </div>
+            <div class="readme-tags">
+              <span class="tag">portfolio</span><span class="tag">design-system</span><span class="tag">static-site</span>
+            </div>
+            <a href="https://github.com/encoreshao/icmoc.web" target="_blank" rel="noopener"
+              class="readme-repo-link">View repository --&gt;</a>
+            <a href="https://icmoc.com" target="_blank" rel="noopener" class="readme-repo-link">Live site --&gt;</a>
+          </div>
+
+          <div class="readme-content" id="content-bookmark-dashboard">
+            <p class="readme-lead">bookmark-dashboard</p>
+            <p>AI-enhanced Chrome extension: replace the new tab with a bookmark dashboard, smart organization, and
+              quick access to your links.</p>
+            <div class="readme-meta">
+              <span class="meta-lang"><span class="lang-dot" style="background:#3178c6"></span>TypeScript</span>
+              <span class="meta-stat">&#9733; 3</span>
+            </div>
+            <div class="readme-tags">
+              <span class="tag">chrome-extension</span><span class="tag">new-tab</span><span class="tag">ai</span>
+            </div>
+            <a href="https://github.com/encoreshao/bookmark-dashboard" target="_blank" rel="noopener"
+              class="readme-repo-link">View repository --&gt;</a>
+            <a href="https://bookmark.linktr.cn/" target="_blank" rel="noopener" class="readme-repo-link">Live
+              dashboard --&gt;</a>
+          </div>
+
+          <!-- stack -->
+          <div class="readme-content" id="content-stack">
+            <p class="readme-lead">stack.md</p>
+            <div class="stack-grid">
+              <div class="stack-col">
+                <h4>Backend</h4>
+                <ul>
+                  <li>Ruby on Rails (95%)</li>
+                  <li>Java (90%)</li>
+                  <li>Python (50%)</li>
+                  <li>SQL (80%)</li>
+                  <li>REST &amp; GraphQL APIs</li>
+                </ul>
+              </div>
+              <div class="stack-col">
+                <h4>AI &amp; Automation</h4>
+                <ul>
+                  <li>Agentic AI (60%)</li>
+                  <li>MCP Servers</li>
+                  <li>LLM Tooling</li>
+                  <li>AI Research</li>
+                </ul>
+              </div>
+              <div class="stack-col">
+                <h4>Client-Side</h4>
+                <ul>
+                  <li>iOS (70%)</li>
+                  <li>Chrome Extensions (90%)</li>
+                  <li>Web Performance</li>
+                </ul>
+              </div>
+              <div class="stack-col">
+                <h4>Infra &amp; data</h4>
+                <ul>
+                  <li>AWS · Docker · Linux</li>
+                  <li>PostgreSQL · Redis · MongoDB</li>
+                  <li>React · Node.js · Spring</li>
+                  <li>TensorFlow · Jupyter</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- thinking -->
+          <div class="readme-content" id="content-thinking">
+            <p class="readme-lead">thinking.txt</p>
+            <div class="thinking-block">
+              <p>Explore widely; ship narrowly — one repo, one clear problem.</p>
+              <p>MCP turns “integrations” into composable tools for agents.</p>
+              <p>Rails for products that need to last; TypeScript for experiments that need speed.</p>
+              <p>Open source is how I learn in public — see opensource/PINNED.md.</p>
+              <p class="thinking-sig">-- <span id="sig-text" class="scramble-hover"
+                  data-scramble="Encore, 31.23°N, 121.47°E">Encore, Shanghai</span></p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Terminal prompt at bottom of pane -->
+        <div class="readme-terminal">
+          <span class="term-user">es</span><span class="term-at">@</span><span class="term-host">shanghai</span><span
+            class="term-sep">:</span><span class="term-path">~</span><span class="term-dollar">$</span>
+          <span class="term-cmd" id="term-cmd">cat <span id="term-filename">about/README.md</span></span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── FOOTER ───────────────────────────────── -->
+  <div class="divider-bar" aria-hidden="true">
+    <div class="divider-inner"></div>
+  </div>
+
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-avatar">ES</div>
+        <p class="footer-tagline">Engineer Manager<br>AI Researcher · @encoreshao</p>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>Open source/</h4>
+          <ul>
+            <li><a href="https://github.com/encoreshao/china_regions" target="_blank" rel="noopener">|-- china_regions</a></li>
+            <li><a href="https://github.com/encoreshao/bamboohr-mcp" target="_blank" rel="noopener">|-- bamboohr-mcp</a></li>
+            <li><a href="https://github.com/encoreshao/ai-rss-reader" target="_blank" rel="noopener">|-- ai-rss-reader</a></li>
+            <li><a href="https://github.com/encoreshao?tab=repositories" target="_blank" rel="noopener">`-- all repos</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect/</h4>
+          <ul>
+            <li><a href="https://github.com/encoreshao" target="_blank" rel="noopener">|-- GitHub</a></li>
+            <li><a href="https://icmoc.com" target="_blank" rel="noopener">|-- icmoc.com</a></li>
+            <li><a href="https://www.linkedin.com/in/encoreshao/" target="_blank" rel="noopener">|-- LinkedIn</a></li>
+            <li><a href="mailto:encore.shao@gmail.com">`-- Email</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Stats/</h4>
+          <ul id="footer-stats">
+            <li><span>|-- GitHub since 2011</span></li>
+            <li><span>|-- loading…</span></li>
+            <li><span>`-- Shanghai, CN</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── STATUS BAR ───────────────────────────── -->
+  <div class="statusbar" id="statusbar">
+    <div class="statusbar-left">
+      <span class="sb-item sb-branch" id="sb-branch" style="cursor: pointer;" title="Cycle Git branch">
+        <svg class="sb-icon" viewBox="0 0 16 16" fill="currentColor">
+          <path
+            d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.492 2.492 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25z" />
         </svg>
-        <div></div>
-    </div>
-    <div id="header">
-        <div>
-            <a class="image-logo" href="/">Encore's Blog</a>
-            <div class="icon-menu switchmenu"></div>
-        </div>
-    </div>
-    
-    <div id="post0">
-        <p>十二月 04, 2019</p>
-        <h2><a href="/2019/12/04/How-to-use-Granfana/" title="How to use Granfana" class="posttitle">How to use Granfana</a></h2>
-        <p class="summary">1今天想给你介绍如何快速使用 Grafana + InfluxDB 帮你搭建一个数据统计平台
-如果你使用的Mac系...</p>
-    </div>
-    
-</div>
-
-    <div id="primary">
-        
-<div class="post">
-    <a href="/2019/04/28/How-to-build-your-blog-by-Hexo/" title="如何使用Hexo快速构建一个博客">
-        <img src="/img/cover.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>四月 28, 2019</p>
-        <h3><a href="/2019/04/28/How-to-build-your-blog-by-Hexo/" title="如何使用Hexo快速构建一个博客" class="posttitle">如何使用Hexo快速构建一个博客</a></h3>
-        <p>准备开始使用Hexo之前，请先确保你的系统中支持Nodejs以及Git，如果还没有，那就开始安装吧！
-
-安装Node.js (https://www.ru...</p>
-    </div>
-</div>
-
-
-<div class="post">
-    <a href="/2019/04/28/about/" title="Encore Shao">
-        <img src="/img/cover.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>四月 28, 2019</p>
-        <h3><a href="/2019/04/28/about/" title="Encore Shao" class="posttitle">Encore Shao</a></h3>
-        <p>Welcome to Encore’s Blog!
-</p>
-    </div>
-</div>
-
-
-<div class="post">
-    <a href="/2019/04/27/hello-world/" title="Hello World">
-        <img src="/img/cover.jpg" class="cover" width="680" height="440">
-    </a>
-    <div class="else">
-        <p>四月 27, 2019</p>
-        <h3><a href="/2019/04/27/hello-world/" title="Hello World" class="posttitle">Hello World</a></h3>
-        <p>Welcome to Hexo! This is your very first post. Check documentation for more i...</p>
-    </div>
-</div>
-
-
+        <span id="branch-name">main</span>
+      </span>
+      <span class="sb-item sb-commit" id="sb-commit" style="cursor: pointer;" title="Show Git commit log"></span>
 
     </div>
-    
-</div>
-<div id="preview"></div>
+    <div class="statusbar-right">
+      <span class="sb-item" id="sb-caffeine" style="cursor: pointer;" title="Caffeine level (Click to drink coffee)">
+        <span id="coffee-cup" style="display: inline-block; transition: transform 0.2s;">☕</span>
+        <span id="caffeine-meter">[░░░░░░░░░░]</span>
+      </span>
+      <span class="sb-item" id="sb-file">README.md</span>
+      <span class="sb-item">UTF-8</span>
+      <span class="sb-item" id="sb-filetype">Markdown</span>
+    </div>
+  </div>
 
+  <!-- Easter egg -->
+  <div class="easter-egg" id="easter-egg">
+    <pre>
+    *        .    *
+  .    *        .        *
+      .  *    .      .
+   *    ___     *
+  .   /   \   .    *
+     | o o |
+      \ - /   you found it.
+   ----| |----
+       |_|    keep shipping.
+    </pre>
+  </div>
+
+  <!-- Git Log Drawer Easter Egg -->
+  <div class="git-log-drawer" id="git-log-drawer">
+    <div class="drawer-header">
+      <span class="drawer-cmd">git log --oneline -n 5</span>
+      <button class="drawer-close" id="drawer-close" aria-label="Close log">&times;</button>
+    </div>
+    <div class="drawer-body" id="git-log-content"></div>
+  </div>
+
+  <!-- Interactive Terminal overlay (for commands output) -->
+  <div class="terminal-toast" id="terminal-toast"></div>
+
+  <!-- Background Matrix Rain Canvas -->
+  <canvas class="matrix-canvas" id="matrix-canvas"></canvas>
+
+
+
+  <script src="js/script.js"></script>
 </body>
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
-<script src="/js/plugin.js"></script>
-<script src="/js/diaspora.js"></script>
-<link rel="stylesheet" href="/photoswipe/photoswipe.css">
-<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
-<script src="/photoswipe/photoswipe.min.js"></script>
-<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <!--  Controls are self-explanatory. Order can be changed. -->
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
 
 </html>
